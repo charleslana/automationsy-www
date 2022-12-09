@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Easy automated testing functions for beginners and advanced"
+    />
+    <meta name="author" content="Charles Lana" />
+    <title>AutomationSy DEV</title>
+    <link
+      href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/" sizes="32x32" type="image/png" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="assets/css/cheatsheet.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <header
+      class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark"
+    >
+      <div class="container-fluid d-flex align-items-center">
+        <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="32"
+            fill="currentColor"
+            class="bi bi-braces"
+            viewBox="0 0 16 16"
+            class="me-2"
+            role="img"
+          >
+            <path
+              d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"
+            />
+          </svg>
+          AutomationSy
+        </h1>
+      </div>
+    </header>
+    <aside
+      class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2"
+    >
+      <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Documentação</h2>
+      <nav class="small" id="toc">
+        <ul class="list-unstyled">
+          <li class="my-2">
+            <button
+              class="btn d-inline-flex align-items-center collapsed"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#contents-collapse"
+              aria-controls="contents-collapse"
+            >
+              Instalação
+            </button>
+            <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#start"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#requirements"
+                  >Requerimentos</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#version"
+                  >Versão</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="my-2">
+            <button
+              class="btn d-inline-flex align-items-center collapsed"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#forms-collapse"
+              aria-controls="forms-collapse"
+            >
+              Configuração
+            </button>
+            <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#headless"
+                  >Modo sem cabeça</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#maximized"
+                  >Defina a tela ao máximo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#windowSize"
+                  >Defina a altura e largura da janela</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#defaultTimeout"
+                  >Defina o tempo de espera das ações</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#waitUntil"
+                  >Espere até</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#defaultNavigationTimeout"
+                  >Defina o tempo de espera da navegação</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="my-2">
+            <button
+              class="btn d-inline-flex align-items-center collapsed"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#components-collapse"
+              aria-controls="components-collapse"
+            >
+              Ações
+            </button>
+            <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+              <li>
+                <a class="d-inline-flex align-items-center rounded" href="#init"
+                  >Inicialização</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="bd-cheatsheet container-fluid bg-body">
+      <section id="install">
+        <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
+          Instalação
+        </h2>
+        <article class="my-3" id="start">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Início</h3>
+          </div>
+          <div>
+            <p>Faça a Instalação do AutomationSy via package do node</p>
+            <p>Execute no seu terminal</p>
+            <code>npm i automationsy</code>
+            <br />
+            <br />
+            <small>Certifique-se ter instalado a ultima versão</small>
+          </div>
+        </article>
+        <article class="my-3" id="requirements">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Requerimentos</h3>
+          </div>
+          <div>
+            <p>É necessário node 14 ou superior instalado</p>
+          </div>
+        </article>
+        <article class="my-3" id="version">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Versão</h3>
+          </div>
+          <div>
+            <p>V.1.0.3</p>
+          </div>
+        </article>
+      </section>
+      <section id="settings">
+        <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
+          Configuração
+        </h2>
+        <article class="my-3" id="headless">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Modo sem cabeça</h3>
+          </div>
+          <div>
+            <p>
+              Você pode ativar o modo sem cabeça para que o navegador não seja
+              visível em tela, por padrão o valor é falso.
+            </p>
+            <p>Informe um parâmetro obrigatório do tipo booleano</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setHeadless(true);</code>
+          </div>
+        </article>
+        <article class="my-3" id="maximized">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Defina a tela ao máximo</h3>
+          </div>
+          <div>
+            <p>
+              Você pode maximizar o tamanho da tela do navegador, por padrão o
+              valor é falso.
+            </p>
+            <p>Informe um parâmetro obrigatório do tipo booleano</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setMaximized(true);</code>
+          </div>
+        </article>
+        <article class="my-3" id="windowSize">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Defina a altura e largura da janela</h3>
+          </div>
+          <div>
+            <p>
+              Você pode alterar o tamanho da largura e altura da janela do
+              navegador, por padrão a largura é 800 e altura 600
+            </p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é a largura e o
+              segundo é a altura
+            </p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setWindowSize(1024, 768);</code>
+          </div>
+        </article>
+        <article class="my-3" id="defaultTimeout">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Defina o tempo de espera das ações</h3>
+          </div>
+          <div>
+            <p>
+              Você pode definir o tempo de espera de cada ação, por padrão é 0,
+              infinitamente.
+            </p>
+            <p>
+              Informe um parâmetro obrigatório, o valor deve ser em
+              milissegundos
+            </p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setDefaultTimeout(5000);</code>
+          </div>
+        </article>
+        <article class="my-3" id="waitUntil">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Espere até</h3>
+          </div>
+          <div>
+            <p>
+              Você pode definir o tipo para a espera da navegação de um site, o
+              tempo que a conexão do navegador finalizou após carregar os dados,
+              por padrão o tipo é load
+            </p>
+            <p>
+              Informe um parâmetro obrigatório, os tipos aceitos são: load,
+              domcontentloaded, networkidle0 e networkidle2
+            </p>
+            <ul>
+              <li>
+                load - considera a navegação encerrada quando tudo estiver
+                carregado
+              </li>
+              <li>
+                domcontentloaded - considera a navegação fechada quando apenas
+                os elementos da página foram carregados
+              </li>
+              <li>
+                networkidle0 - considera a navegação encerrada quando não houver
+                mais de 0 conexões de rede por pelo menos 500ms
+              </li>
+              <li>
+                networkidle2 - considera a navegação encerrada quando não há
+                mais de 2 conexões de rede por pelo menos 500ms
+              </li>
+            </ul>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setWaitUntil('domcontentloaded');</code>
+          </div>
+        </article>
+        <article class="my-3" id="defaultNavigationTimeout">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Defina o tempo de espera da navegação</h3>
+          </div>
+          <div>
+            <p>
+              Você pode definir o tempo de espera da navegação, por padrão é 0,
+              infinitamente.
+            </p>
+            <p>
+              Informe um parâmetro obrigatório, o valor deve ser em
+              milissegundos
+            </p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.setDefaultNavigationTimeout(5000);</code>
+          </div>
+        </article>
+      </section>
+      <section id="actions">
+        <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Ações</h2>
+        <article class="my-3 mb-5 pb-5" id="init">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Inicialização</h3>
+          </div>
+          <div>
+            <p>
+              Para que possa iniciar as ações da automação no navegador é
+              necessário executar esta ação primeiramente
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.init();</code>
+          </div>
+        </article>
+      </section>
+      <section>
+        <div></div>
+        <footer class="pt-5 my-5 text-muted border-top w-100">
+          Created by Charles Lana - AutomationSy &middot; &copy; 2022
+        </footer>
+      </section>
+    </div>
+    <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cheatsheet.js"></script>
+  </body>
+</html>
