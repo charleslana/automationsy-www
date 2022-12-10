@@ -15,7 +15,7 @@
     />
     <link rel="icon" href="assets/images/" sizes="32x32" type="image/png" />
     <meta name="theme-color" content="#712cf9" />
-    <link href="assets/css/cheatsheet.css" rel="stylesheet" />
+    <link href="assets/css/docs.css" rel="stylesheet" />
   </head>
   <body class="bg-light">
     <header
@@ -58,12 +58,12 @@
               class="btn d-inline-flex align-items-center collapsed"
               data-bs-toggle="collapse"
               aria-expanded="false"
-              data-bs-target="#contents-collapse"
-              aria-controls="contents-collapse"
+              data-bs-target="#install-collapse"
+              aria-controls="install-collapse"
             >
               Instalação
             </button>
-            <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+            <ul class="list-unstyled ps-3 collapse" id="install-collapse">
               <li>
                 <a
                   class="d-inline-flex align-items-center rounded"
@@ -92,12 +92,12 @@
               class="btn d-inline-flex align-items-center collapsed"
               data-bs-toggle="collapse"
               aria-expanded="false"
-              data-bs-target="#forms-collapse"
-              aria-controls="forms-collapse"
+              data-bs-target="#settings-collapse"
+              aria-controls="settings-collapse"
             >
               Configuração
             </button>
-            <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+            <ul class="list-unstyled ps-3 collapse" id="settings-collapse">
               <li>
                 <a
                   class="d-inline-flex align-items-center rounded"
@@ -147,12 +147,12 @@
               class="btn d-inline-flex align-items-center collapsed"
               data-bs-toggle="collapse"
               aria-expanded="false"
-              data-bs-target="#components-collapse"
-              aria-controls="components-collapse"
+              data-bs-target="#actions-collapse"
+              aria-controls="actions-collapse"
             >
               Ações
             </button>
-            <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+            <ul class="list-unstyled ps-3 collapse" id="actions-collapse">
               <li>
                 <a class="d-inline-flex align-items-center rounded" href="#init"
                   >Inicialização</a
@@ -252,6 +252,192 @@
                   >Clique longo</a
                 >
               </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#selectByValue"
+                  >Selecione por valor</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#selectByIndex"
+                  >Selecione por índice</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#waitForLocator"
+                  >Espere pelo localizador</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#switchPage"
+                  >Mudar de página</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#quitPage"
+                  >Saia da página</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#waitForLocatorDisappear"
+                  >Espere que o localizador desapareça</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#dragAndDropByPosition"
+                  >Arrastar e soltar pela posição</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#dragAndDropByTarget"
+                  >Arrastar e soltar no alvo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#scroll"
+                  >Rolagem</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#setHTML"
+                  >Definir HTML</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#removeHTML"
+                  >Remover HTML</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#screenshot"
+                  >Captura de tela</a
+                >
+              </li>
+              <li>
+                <a class="d-inline-flex align-items-center rounded" href="#pdf"
+                  >Criar PDF</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#autoScroll"
+                  >Rolagem infinita</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="my-2">
+            <button
+              class="btn d-inline-flex align-items-center collapsed"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#resources-collapse"
+              aria-controls="resources-collapse"
+            >
+              Recursos
+            </button>
+            <ul class="list-unstyled ps-3 collapse" id="resources-collapse">
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#isDisabled"
+                  >Obter Habilitado / Desabilitado</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#isChecked"
+                  >Obter Marcado / Desmarcado</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getTitle"
+                  >Obter título</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getUrl"
+                  >Obter URL</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getByAttribute"
+                  >Obter atributo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getAllByAttribute"
+                  >Obter todos por atributo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getText"
+                  >Obter texto</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getPositionX"
+                  >Obter posição x</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getPositionY"
+                  >Obter posição y</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getWidth"
+                  >Obter largura</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#getHeight"
+                  >Obter altura</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -269,7 +455,7 @@
             <h3>Início</h3>
           </div>
           <div>
-            <p>Faça a Instalação do AutomationSy via package do node</p>
+            <p>Faça a Instalação do AutomationSy via NPM package</p>
             <p>Execute no seu terminal</p>
             <code>npm i automationsy</code>
             <br />
@@ -717,6 +903,531 @@
             <code>await AutomationSy.longClick('#id', 2000);</code>
           </div>
         </article>
+        <article class="my-3 mb-5 pb-5" id="selectByValue">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Selecione por valor</h3>
+          </div>
+          <div>
+            <p>Você pode selecione um dropdown pelo valor</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é uma lista para cada valor do dropdown
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.selectByValue('#id', 'primeiro');</code>
+            <p>ou</p>
+            <br />
+            <code
+              >await AutomationSy.selectByValue('#id', 'primeiro',
+              'segundo');</code
+            >
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="selectByIndex">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Selecione por índice</h3>
+          </div>
+          <div>
+            <p>Você pode selecione um dropdown pelo índice</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é um número inteiro ordenado pelo seu índice
+              na lista do dropdown
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.selectByIndex('#id', 0);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="waitForLocator">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Espere pelo localizador</h3>
+          </div>
+          <div>
+            <p>Você pode aguardar até que um elemento na página apareça</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.waitForLocator('#id');</code>
+            <p>
+              Para definir o tempo da espera utilize o
+              <a href="#defaultTimeout">Defina o tempo de espera das ações</a>
+            </p>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="switchPage">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Mudar de página</h3>
+          </div>
+          <div>
+            <p>Você pode alternar entre as páginas abertas no navegador</p>
+            <p>Informe um parâmetro obrigatório, o índice da página</p>
+            <p>
+              O índice da página é definindo pela ordem das abas abertas no
+              navegador
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.switchPage(1);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="quitPage">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Saia da página</h3>
+          </div>
+          <div>
+            <p>Você pode sair das páginas abertas no navegador</p>
+            <p>Informe um parâmetro obrigatório, o índice da página</p>
+            <p>
+              O índice da página é definindo pela ordem das abas abertas no
+              navegador
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.quitPage(1);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="waitForLocatorDisappear">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Espere que o localizador desapareça</h3>
+          </div>
+          <div>
+            <p>Você pode aguardar até que um elemento na página desapareça</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.waitForLocatorDisappear('#id');</code>
+            <p>
+              Para definir o tempo da espera utilize o
+              <a href="#defaultTimeout">Defina o tempo de espera das ações</a>
+            </p>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="dragAndDropByPosition">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Arrastar e soltar pela posição</h3>
+          </div>
+          <div>
+            <p>Você pode arrastar um elemento até uma posição da página</p>
+            <p>
+              Informe três parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é posição x da página, o terceiro é a posição
+              y da página
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code
+              >await AutomationSy.dragAndDropByPosition('#id', 20 , 40);</code
+            >
+            <p>
+              Você pode obter a posição de outro elemento da página usando o
+              <a href="#getPositionX">Obter posição x</a> e
+              <a href="#getPositionY">Obter posição y</a>
+            </p>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="dragAndDropByTarget">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Arrastar e soltar no alvo</h3>
+          </div>
+          <div>
+            <p>Você pode arrastar um elemento até a outro elemento na página</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é o localizador do alvo na página
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.dragAndDropByTarget('#id', '#alvo');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="scroll">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Rolagem</h3>
+          </div>
+          <div>
+            <p>Mova a barra de rolagem do navegador verticalmente</p>
+            <p>Informe um parâmetro obrigatório, a distância em pixels</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.scroll(300);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="setHTML">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Definir HTML</h3>
+          </div>
+          <div>
+            <p>Escreva tags HTML na página</p>
+            <p>Informe um parâmetro obrigatório, marcação HTML</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code
+              >await AutomationSy.setHTML('&#60;h1&#62;Olá
+              mundo&#60;/h1&#62;');</code
+            >
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="removeHTML">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Remover HTML</h3>
+          </div>
+          <div>
+            <p>Você pode remover elementos HTML da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.removeHTML('text=Remover');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="screenshot">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Captura de tela</h3>
+          </div>
+          <div>
+            <p>
+              Você pode tirar um print ou captura de tela do navegador no exato
+              momentos dos testes
+            </p>
+            <p>
+              Por padrão a pasta de captura de telas é screenshots localizada na
+              pasta raiz do projeto inicializado pelo usuário
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.screenshot();</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="pdf">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Criar PDF</h3>
+          </div>
+          <div>
+            <p>
+              Você pode criar um PDF do HTML da página navegada no exato
+              momentos dos testes
+            </p>
+            <p>
+              Por padrão a pasta de criação de PDF é pdf localizada na pasta
+              raiz do projeto inicializado pelo usuário
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.pdf();</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="autoScroll">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Rolagem infinita</h3>
+          </div>
+          <div>
+            <p>
+              Mova a barra de rolagem do navegador verticalmente infinitamente
+            </p>
+            <p>
+              Informe dois parâmetros não obrigatórios, o primeiro é a distância
+              em pixels, o segundo é o atraso em milissegundos até que a rolagem
+              chega ao final da página, por padrão os valores da distância é 100
+              e o atraso é 100
+            </p>
+            <p>
+              Está ação pode ser usado em casos em que haja paginação infinita
+              no final da página
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.autoScroll(500, 1000);</code>
+          </div>
+        </article>
+      </section>
+      <section id="resources">
+        <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
+          Recursos
+        </h2>
+        <article class="my-3" id="isDisabled">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter Habilitado / Desabilitado</h3>
+          </div>
+          <div>
+            <p>
+              Obtenha um valor booleano se o elemento da página é desabilitado
+              ou não
+            </p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.isDisabled('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="isChecked">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter Marcado / Desmarcado</h3>
+          </div>
+          <div>
+            <p>
+              Obtenha um valor booleano se o elemento da página é marcado ou não
+            </p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.isChecked('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getTitle">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter título</h3>
+          </div>
+          <div>
+            <p>Obtenha o título da página</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getTitle();</code>
+          </div>
+        </article>
+        <article class="my-3" id="getUrl">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter URL</h3>
+          </div>
+          <div>
+            <p>Obtenha a url atual da página</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>AutomationSy.getUrl();</code>
+          </div>
+        </article>
+        <article class="my-3" id="getByAttribute">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter atributo</h3>
+          </div>
+          <div>
+            <p>Obtenha o atributo de um elemento da página</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é o atributo desejado do localizador
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getByAttribute('#id', 'href');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getAllByAttribute">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter todos por atributo</h3>
+          </div>
+          <div>
+            <p>
+              Obtenha uma lista de atributo por cada elemento duplicado na
+              página
+            </p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é o atributo desejado do localizador
+            </p>
+            <p>Lembrando que o localizador pode ser duplicado</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getAllByAttribute('input', 'value');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getText">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter texto</h3>
+          </div>
+          <div>
+            <p>Obtenha um texto contido no elemento da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getText('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getPositionX">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter posição x</h3>
+          </div>
+          <div>
+            <p>Obtenha a posição x de um elemento na página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getPositionX('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getPositionY">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter posição y</h3>
+          </div>
+          <div>
+            <p>Obtenha a posição y de um elemento na página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getPositionY('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getWidth">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter largura</h3>
+          </div>
+          <div>
+            <p>Obtenha a largura de um elemento na página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getWidth('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="getHeight">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter altura</h3>
+          </div>
+          <div>
+            <p>Obtenha a altura de um elemento na página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.getHeight('#id');</code>
+          </div>
+        </article>
       </section>
       <section>
         <div></div>
@@ -740,6 +1451,6 @@
       </svg>
     </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/cheatsheet.js"></script>
+    <script src="assets/js/docs.js"></script>
   </body>
 </html>
