@@ -8,7 +8,7 @@
       content="Easy automated testing functions for beginners and advanced"
     />
     <meta name="author" content="Charles Lana" />
-    <title>AutomationSy DEV</title>
+    <title>AutomationSy Documentação</title>
     <link
       href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -45,6 +45,12 @@
       class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2"
     >
       <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">Documentação</h2>
+      <input
+        type="text"
+        class="form-control"
+        id="search"
+        placeholder="Pesquisar..."
+      />
       <nav class="small" id="toc">
         <ul class="list-unstyled">
           <li class="my-2">
@@ -150,6 +156,100 @@
               <li>
                 <a class="d-inline-flex align-items-center rounded" href="#init"
                   >Inicialização</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#dispose"
+                  >Descartar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#sleep"
+                  >Atrasar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#navigate"
+                  >Navegar</a
+                >
+              </li>
+              <li>
+                <a class="d-inline-flex align-items-center rounded" href="#type"
+                  >Digitar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#focus"
+                  >Foco</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#keyboard"
+                  >Teclado</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#clear"
+                  >Limpar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#click"
+                  >Clicar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#goBack"
+                  >Voltar</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#goForward"
+                  >Vá em frente</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#clickPosition"
+                  >Clique na posição</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#doubleClick"
+                  >Duplo clique</a
+                >
+              </li>
+              <li>
+                <a class="d-inline-flex align-items-center rounded" href="#fill"
+                  >Preencher</a
+                >
+              </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#longClick"
+                  >Clique longo</a
                 >
               </li>
             </ul>
@@ -355,6 +455,268 @@
             <code>await AutomationSy.init();</code>
           </div>
         </article>
+        <article class="my-3 mb-5 pb-5" id="dispose">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Descartar</h3>
+          </div>
+          <div>
+            <p>Você pode descartar e finalizar as ações do navegador</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.dispose();</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="sleep">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Atrasar</h3>
+          </div>
+          <div>
+            <p>
+              Você pode atrasar as ações definindo um tempo em milissegundos
+            </p>
+            <p>
+              Informe um parâmetro obrigatório, o valor deve ser em
+              milissegundos
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.sleep(5000);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="navigate">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Navegar</h3>
+          </div>
+          <div>
+            <p>Você pode navegar para um site informando uma url válida</p>
+            <p>
+              Informe um parâmetro obrigatório, o valor deve ser uma url válida
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code
+              >await
+              AutomationSy.navigate('https://github.com/charleslana');</code
+            >
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="type">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Digitar</h3>
+          </div>
+          <div>
+            <p>Você pode digitar um texto em um campo de formulário</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página e o segundo é o texto a digitar
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.type('#id', 'texto a digitar');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="focus">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Foco</h3>
+          </div>
+          <div>
+            <p>Você pode focar um elemento da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.focus('input');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="keyboard">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Teclado</h3>
+          </div>
+          <div>
+            <p>Você pode pressionar uma tecla do teclado na página</p>
+            <p>Informe um parâmetro obrigatório, a tecla do teclado</p>
+            <p>Exemplo de teclas: Tab, Enter</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.keyboard('Enter');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="clear">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Limpar</h3>
+          </div>
+          <div>
+            <p>Você pode limpar um campo de um elemento da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.clear('.clear');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="click">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Clicar</h3>
+          </div>
+          <div>
+            <p>Você pode clicar em um elemento da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.click('/html/body/button');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="goBack">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Voltar</h3>
+          </div>
+          <div>
+            <p>Você pode navegar para uma rota anterior</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.goBack();</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="goForward">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Vá em frente</h3>
+          </div>
+          <div>
+            <p>Você pode navegar para uma rota a frente</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.goForward();</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="clickPosition">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Clique na posição</h3>
+          </div>
+          <div>
+            <p>Você pode clicar em uma posição da página</p>
+            <p>
+              Informe dois parâmetros inteiros obrigatórios, o primeiro é sua
+              posição x, o segundo é a posição y
+            </p>
+            <p>Os valores da posição são em pixel</p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.clickPosition(20 ,40);</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="doubleClick">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Duplo clique</h3>
+          </div>
+          <div>
+            <p>Você pode usar o clique duplo em um elemento da página</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.doubleClick('//*[@id="goToTop"]');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="fill">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Preencher</h3>
+          </div>
+          <div>
+            <p>
+              Diferente do Digitar, você pode preencher um texto em um campo de
+              formulário rapidamente
+            </p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página e o segundo é o texto a digitar
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.fill('#id', 'texto a digitar');</code>
+          </div>
+        </article>
+        <article class="my-3 mb-5 pb-5" id="longClick">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Clique longo</h3>
+          </div>
+          <div>
+            <p>Você pode usar o clique longo em um elemento da página</p>
+            <p>
+              Informe dois parâmetros obrigatórios, o primeiro é o localizador
+              da página, o segundo é o tempo de espera em milissegundos
+            </p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.longClick('#id', 2000);</code>
+          </div>
+        </article>
       </section>
       <section>
         <div></div>
@@ -362,6 +724,20 @@
           Created by Charles Lana - AutomationSy &middot; &copy; 2022
         </footer>
       </section>
+    </div>
+    <div id="goToTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="currentColor"
+        class="bi bi-arrow-up-circle-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+        />
+      </svg>
     </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/cheatsheet.js"></script>

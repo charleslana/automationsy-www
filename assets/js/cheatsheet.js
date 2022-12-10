@@ -1,37 +1,5 @@
-/* global bootstrap: false */
-
 (function () {
   'use strict'
-
-  // Tooltip and popover demos
-  document.querySelectorAll('.tooltip-demo')
-    .forEach(function (tooltip) {
-      new bootstrap.Tooltip(tooltip, {
-        selector: '[data-bs-toggle="tooltip"]'
-      })
-    })
-
-  document.querySelectorAll('[data-bs-toggle="popover"]')
-    .forEach(function (popover) {
-      new bootstrap.Popover(popover)
-    })
-
-  document.querySelectorAll('.toast')
-    .forEach(function (toastNode) {
-      var toast = new bootstrap.Toast(toastNode, {
-        autohide: false
-      })
-
-      toast.show()
-    })
-
-  // Disable empty links and submit buttons
-  document.querySelectorAll('[href="#"], [type="submit"]')
-    .forEach(function (link) {
-      link.addEventListener('click', function (event) {
-        event.preventDefault()
-      })
-    })
 
   function setActiveItem() {
     var hash = window.location.hash
@@ -70,4 +38,43 @@
 
   setActiveItem()
   window.addEventListener('hashchange', setActiveItem)
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById('goToTop').style.display = 'block';
+      return;
+    }
+    document.getElementById('goToTop').style.display = 'none';
+  }
+
+  window.onscroll = function() {
+    scrollFunction()
+  };
+
+  document.getElementById('goToTop').addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+
+  function onSearch() {
+    let input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('search');
+    filter = input.value.toUpperCase();
+    ul = document.querySelectorAll('.list-unstyled.ps-3');
+    ul.forEach((ul) => {
+      li = ul.getElementsByTagName('li');
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName('a')[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+    });
+  }
+
+  document.getElementById('search').addEventListener('keyup', function(e) {
+    onSearch();
+  });
 })()
