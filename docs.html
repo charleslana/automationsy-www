@@ -348,6 +348,13 @@
                   >Rolagem infinita</a
                 >
               </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#hover"
+                  >Mouse flutuante</a
+                >
+              </li>
             </ul>
           </li>
           <li class="my-2">
@@ -365,14 +372,14 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#isDisabled"
-                  >Obter Habilitado / Desabilitado</a
+                  >Obter habilitado / desabilitado</a
                 >
               </li>
               <li>
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#isChecked"
-                  >Obter Marcado / Desmarcado</a
+                  >Obter marcado / desmarcado</a
                 >
               </li>
               <li>
@@ -438,6 +445,13 @@
                   >Obter altura</a
                 >
               </li>
+              <li>
+                <a
+                  class="d-inline-flex align-items-center rounded"
+                  href="#isVisible"
+                  >Obter visível / invisível</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -480,7 +494,7 @@
             <h3>Versão</h3>
           </div>
           <div>
-            <p>V.1.0.4</p>
+            <p>v1.0.5</p>
           </div>
         </article>
       </section>
@@ -1210,6 +1224,25 @@
             <code>await AutomationSy.autoScroll(500, 1000);</code>
           </div>
         </article>
+        <article class="my-3 mb-5 pb-5" id="hover">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Mouse flutuante</h3>
+          </div>
+          <div>
+            <p>Você pode passar o mouse por cima do elemento</p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.hover('#id');</code>
+          </div>
+        </article>
       </section>
       <section id="resources">
         <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
@@ -1219,7 +1252,7 @@
           <div
             class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
           >
-            <h3>Obter Habilitado / Desabilitado</h3>
+            <h3>Obter habilitado / desabilitado</h3>
           </div>
           <div>
             <p>
@@ -1241,7 +1274,7 @@
           <div
             class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
           >
-            <h3>Obter Marcado / Desmarcado</h3>
+            <h3>Obter marcado / desmarcado</h3>
           </div>
           <div>
             <p>
@@ -1426,6 +1459,27 @@
             <small>Veja como usar:</small>
             <br />
             <code>await AutomationSy.getHeight('#id');</code>
+          </div>
+        </article>
+        <article class="my-3" id="isVisible">
+          <div
+            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+          >
+            <h3>Obter visível / invisível</h3>
+          </div>
+          <div>
+            <p>
+              Obtenha um valor booleano se o elemento da página é visível ou não
+            </p>
+            <p>Informe um parâmetro obrigatório, o localizador da página</p>
+            <p>
+              O localizador da página são os elementos da página como id,
+              tagname, classe, xpath, etcs...
+            </p>
+            <p>Está ação é assíncrona</p>
+            <small>Veja como usar:</small>
+            <br />
+            <code>await AutomationSy.isVisible('#id');</code>
           </div>
         </article>
       </section>
