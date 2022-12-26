@@ -8,7 +8,7 @@
       content="Easy automated testing functions for beginners and advanced"
     />
     <meta name="author" content="Charles Lana" />
-    <title>AutomationSy Docs v1</title>
+    <title>AutomationSy Docs v2</title>
     <link
       href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,34 +24,50 @@
       <div
         class="container-fluid d-flex align-items-center justify-content-between"
       >
-        <a class="navbar-brand" href="index.html">
-          <h1 class="d-flex align-items-center fs-4 text-white mb-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="32"
-              fill="currentColor"
-              class="bi bi-braces"
-              viewBox="0 0 16 16"
-              class="me-2"
-              role="img"
-            >
-              <path
-                d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"
-              />
-            </svg>
-            AutomationSy
-          </h1>
-        </a>
-        <div class="dropdown">
+        <div class="d-flex">
+          <a class="navbar-brand" href="index.html">
+            <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="32"
+                fill="currentColor"
+                class="bi bi-braces"
+                viewBox="0 0 16 16"
+                class="me-2"
+                role="img"
+              >
+                <path
+                  d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"
+                />
+              </svg>
+              AutomationSy
+            </h1>
+          </a>
+          <div class="dropdown mx-3 d-none d-sm-block">
+            <div class="input-group input-group-lg">
+              <select
+                class="form-select"
+                aria-label="Select Language"
+                id="selectLanguage"
+              >
+                <option value="pt" selected data-lang-str="selectPt">
+                  Português
+                </option>
+                <option value="en" data-lang-str="selectEn">Inglês</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown d-none d-sm-block">
           <div class="input-group input-group-lg">
             <select
               class="form-select"
               aria-label="Select Version"
               id="selectVersion"
             >
-              <option value="1" selected>v1.0.0</option>
-              <option value="2">v2.0.0</option>
+              <option value="1">v1.0.0</option>
+              <option value="2" selected>v2.0.0</option>
             </select>
           </div>
         </div>
@@ -60,12 +76,18 @@
     <aside
       class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2"
     >
-      <h2 class="h6 pt-5 pb-3 mb-4 border-bottom">Documentação</h2>
+      <h2
+        class="h6 pt-5 pb-3 mb-4 border-bottom"
+        data-lang-str="docDocumentationTitle"
+      >
+        Documentação
+      </h2>
       <input
         type="text"
         class="form-control"
         id="search"
         placeholder="Pesquisar..."
+        data-lang-str="docSearchInput"
       />
       <nav class="small" id="toc">
         <ul class="list-unstyled">
@@ -76,6 +98,7 @@
               aria-expanded="false"
               data-bs-target="#install-collapse"
               aria-controls="install-collapse"
+              data-lang-str="docInstallTitle"
             >
               Instalação
             </button>
@@ -84,6 +107,7 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#start"
+                  data-lang-str="docStartTitle"
                   >Início</a
                 >
               </li>
@@ -91,6 +115,7 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#requirements"
+                  data-lang-str="docRequirementsTitle"
                   >Requerimentos</a
                 >
               </li>
@@ -98,6 +123,7 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#version"
+                  data-lang-str="docVersionTitle"
                   >Versão</a
                 >
               </li>
@@ -110,6 +136,7 @@
               aria-expanded="false"
               data-bs-target="#settings-collapse"
               aria-controls="settings-collapse"
+              data-lang-str="docConfigTitle"
             >
               Configuração
             </button>
@@ -118,6 +145,7 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#headless"
+                  data-lang-str="docHeadlessTitle"
                   >Modo sem cabeça</a
                 >
               </li>
@@ -125,6 +153,7 @@
                 <a
                   class="d-inline-flex align-items-center rounded"
                   href="#maximized"
+                  data-lang-str="docMaximizedTitle"
                   >Defina a tela ao máximo</a
                 >
               </li>
@@ -170,15 +199,10 @@
             </button>
             <ul class="list-unstyled ps-3 collapse" id="actions-collapse">
               <li>
-                <a class="d-inline-flex align-items-center rounded" href="#init"
-                  >Inicialização</a
-                >
-              </li>
-              <li>
                 <a
                   class="d-inline-flex align-items-center rounded"
-                  href="#dispose"
-                  >Descartar</a
+                  href="#close"
+                  >Fechar</a
                 >
               </li>
               <li>
@@ -474,28 +498,6 @@
       </nav>
     </aside>
     <div class="bd-cheatsheet container-fluid bg-body">
-      <section class="d-flex mt-5">
-        <div
-          class="alert alert-danger d-flex align-items-center w-100"
-          role="alert"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
-            viewBox="0 0 16 16"
-            role="img"
-            aria-label="Warning:"
-          >
-            <path
-              d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
-            />
-          </svg>
-          <div>Versão não tem mais suporte</div>
-        </div>
-      </section>
       <section id="install">
         <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 bg-white">
           Instalação
@@ -512,7 +514,19 @@
             <code>npm i automationsy</code>
             <br />
             <br />
-            <small>Certifique-se ter instalado a ultima versão</small>
+            <small
+              >A partir da versão 2 adiante as importações são diferentes</small
+            >
+            <br />
+            <br />
+            <code>
+              import { Action, Config, Resource } from 'automationsy';
+            </code>
+            <ul>
+              <li>Action - Ações do navegador com a página</li>
+              <li>Config - Configure informações da automação do navegador</li>
+              <li>Resource - Obtenha os recursos de elementos da página</li>
+            </ul>
           </div>
         </article>
         <article class="my-3" id="requirements">
@@ -532,7 +546,7 @@
             <h3>Versão</h3>
           </div>
           <div>
-            <p>v1.0.6</p>
+            <p>v2.0.0</p>
           </div>
         </article>
       </section>
@@ -554,7 +568,7 @@
             <p>Informe um parâmetro obrigatório do tipo booleano</p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setHeadless(true);</code>
+            <code>Config.setHeadless(true);</code>
           </div>
         </article>
         <article class="my-3" id="maximized">
@@ -571,7 +585,7 @@
             <p>Informe um parâmetro obrigatório do tipo booleano</p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setMaximized(true);</code>
+            <code>Config.setMaximized(true);</code>
           </div>
         </article>
         <article class="my-3" id="windowSize">
@@ -591,7 +605,7 @@
             </p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setWindowSize(1024, 768);</code>
+            <code>Config.setWindowSize(1024, 768);</code>
           </div>
         </article>
         <article class="my-3" id="defaultTimeout">
@@ -611,7 +625,7 @@
             </p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setDefaultTimeout(5000);</code>
+            <code>Config.setDefaultTimeout(5000);</code>
           </div>
         </article>
         <article class="my-3" id="waitUntil">
@@ -650,7 +664,7 @@
             </ul>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setWaitUntil('domcontentloaded');</code>
+            <code>Config.setWaitUntil('domcontentloaded');</code>
           </div>
         </article>
         <article class="my-3" id="defaultNavigationTimeout">
@@ -670,7 +684,7 @@
             </p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.setDefaultNavigationTimeout(5000);</code>
+            <code>Config.setDefaultNavigationTimeout(5000);</code>
           </div>
         </article>
       </section>
@@ -678,35 +692,18 @@
         <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3 bg-white">
           Ações
         </h2>
-        <article class="my-3 mb-5 pb-5" id="init">
+        <article class="my-3 mb-5 pb-5" id="close">
           <div
             class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
           >
-            <h3>Inicialização</h3>
+            <h3>Fechar</h3>
           </div>
           <div>
-            <p>
-              Para que possa iniciar as ações da automação no navegador é
-              necessário executar esta ação primeiramente
-            </p>
+            <p>Você pode fechar e finalizar as ações do navegador</p>
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.init();</code>
-          </div>
-        </article>
-        <article class="my-3 mb-5 pb-5" id="dispose">
-          <div
-            class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
-          >
-            <h3>Descartar</h3>
-          </div>
-          <div>
-            <p>Você pode descartar e finalizar as ações do navegador</p>
-            <p>Está ação é assíncrona</p>
-            <small>Veja como usar:</small>
-            <br />
-            <code>await AutomationSy.dispose();</code>
+            <code>await Action.closeBrowser();</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="sleep">
@@ -726,7 +723,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.sleep(5000);</code>
+            <code>await Action.sleep(5000);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="navigate">
@@ -744,8 +741,7 @@
             <small>Veja como usar:</small>
             <br />
             <code
-              >await
-              AutomationSy.navigate('https://github.com/charleslana');</code
+              >await Action.navigate('https://github.com/charleslana');</code
             >
           </div>
         </article>
@@ -768,7 +764,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.type('#id', 'texto a digitar');</code>
+            <code>await Action.type('#id', 'texto a digitar');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="focus">
@@ -787,7 +783,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.focus('input');</code>
+            <code>await Action.focus('input');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="keyboard">
@@ -803,7 +799,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.keyboard('Enter');</code>
+            <code>await Action.keyboard('Enter');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="clear">
@@ -822,7 +818,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.clear('.clear');</code>
+            <code>await Action.clear('.clear');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="click">
@@ -841,7 +837,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.click('/html/body/button');</code>
+            <code>await Action.click('/html/body/button');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="goBack">
@@ -855,7 +851,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.goBack();</code>
+            <code>await Action.goBack();</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="goForward">
@@ -869,7 +865,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.goForward();</code>
+            <code>await Action.goForward();</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="clickPosition">
@@ -888,7 +884,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.clickPosition(20 ,40);</code>
+            <code>await Action.clickPosition(20 ,40);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="doubleClick">
@@ -907,7 +903,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.doubleClick('//*[@id="goToTop"]');</code>
+            <code>await Action.doubleClick('//*[@id="goToTop"]');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="fill">
@@ -932,7 +928,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.fill('#id', 'texto a digitar');</code>
+            <code>await Action.fill('#id', 'texto a digitar');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="longClick">
@@ -954,7 +950,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.longClick('#id', 2000);</code>
+            <code>await Action.longClick('#id', 2000);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="selectByValue">
@@ -976,12 +972,11 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.selectByValue('#id', 'primeiro');</code>
+            <code>await Action.selectByValue('#id', 'primeiro');</code>
             <p>ou</p>
             <br />
             <code
-              >await AutomationSy.selectByValue('#id', 'primeiro',
-              'segundo');</code
+              >await Action.selectByValue('#id', 'primeiro', 'segundo');</code
             >
           </div>
         </article>
@@ -1005,7 +1000,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.selectByIndex('#id', 0);</code>
+            <code>await Action.selectByIndex('#id', 0);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="waitForLocator">
@@ -1024,7 +1019,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.waitForLocator('#id');</code>
+            <code>await Action.waitForLocator('#id');</code>
             <p>
               Para definir o tempo da espera utilize o
               <a href="#defaultTimeout">Defina o tempo de espera das ações</a>
@@ -1047,7 +1042,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.switchPage(1);</code>
+            <code>await Action.switchPage(1);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="quitPage">
@@ -1066,7 +1061,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.quitPage(1);</code>
+            <code>await Action.quitPage(1);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="waitForLocatorDisappear">
@@ -1085,7 +1080,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.waitForLocatorDisappear('#id');</code>
+            <code>await Action.waitForLocatorDisappear('#id');</code>
             <p>
               Para definir o tempo da espera utilize o
               <a href="#defaultTimeout">Defina o tempo de espera das ações</a>
@@ -1112,9 +1107,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code
-              >await AutomationSy.dragAndDropByPosition('#id', 20 , 40);</code
-            >
+            <code>await Action.dragAndDropByPosition('#id', 20 , 40);</code>
             <p>
               Você pode obter a posição de outro elemento da página usando o
               <a href="#getPositionX">Obter posição x</a> e
@@ -1141,7 +1134,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.dragAndDropByTarget('#id', '#alvo');</code>
+            <code>await Action.dragAndDropByTarget('#id', '#alvo');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="scroll">
@@ -1156,7 +1149,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.scroll(300);</code>
+            <code>await Action.scroll(300);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="setHTML">
@@ -1172,8 +1165,7 @@
             <small>Veja como usar:</small>
             <br />
             <code
-              >await AutomationSy.setHTML('&#60;h1&#62;Olá
-              mundo&#60;/h1&#62;');</code
+              >await Action.setHTML('&#60;h1&#62;Olá mundo&#60;/h1&#62;');</code
             >
           </div>
         </article>
@@ -1193,7 +1185,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.removeHTML('text=Remover');</code>
+            <code>await Action.removeHTML('text=Remover');</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="screenshot">
@@ -1214,7 +1206,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.screenshot();</code>
+            <code>await Action.screenshot();</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="pdf">
@@ -1235,7 +1227,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.pdf();</code>
+            <code>await Action.pdf();</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="autoScroll">
@@ -1261,7 +1253,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.autoScroll(500, 1000);</code>
+            <code>await Action.autoScroll(500, 1000);</code>
           </div>
         </article>
         <article class="my-3 mb-5 pb-5" id="hover">
@@ -1280,7 +1272,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.hover('#id');</code>
+            <code>await Action.hover('#id');</code>
           </div>
         </article>
       </section>
@@ -1307,7 +1299,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.isDisabled('#id');</code>
+            <code>await Resource.isDisabled('#id');</code>
           </div>
         </article>
         <article class="my-3" id="isChecked">
@@ -1328,7 +1320,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.isChecked('#id');</code>
+            <code>await Resource.isChecked('#id');</code>
           </div>
         </article>
         <article class="my-3" id="getTitle">
@@ -1342,7 +1334,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getTitle();</code>
+            <code>await Resource.getTitle();</code>
           </div>
         </article>
         <article class="my-3" id="getUrl">
@@ -1353,9 +1345,10 @@
           </div>
           <div>
             <p>Obtenha a url atual da página</p>
+            <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>AutomationSy.getUrl();</code>
+            <code>await Resource.getUrl();</code>
           </div>
         </article>
         <article class="my-3" id="getByAttribute">
@@ -1377,7 +1370,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getByAttribute('#id', 'href');</code>
+            <code>await Resource.getByAttribute('#id', 'href');</code>
           </div>
         </article>
         <article class="my-3" id="getAllByAttribute">
@@ -1403,7 +1396,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getAllByAttribute('input', 'value');</code>
+            <code>await Resource.getAllByAttribute('input', 'value');</code>
           </div>
         </article>
         <article class="my-3" id="getText">
@@ -1422,7 +1415,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getText('#id');</code>
+            <code>await Resource.getText('#id');</code>
           </div>
         </article>
         <article class="my-3" id="getPositionX">
@@ -1441,7 +1434,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getPositionX('#id');</code>
+            <code>await Resource.getPositionX('#id');</code>
           </div>
         </article>
         <article class="my-3" id="getPositionY">
@@ -1460,7 +1453,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getPositionY('#id');</code>
+            <code>await Resource.getPositionY('#id');</code>
           </div>
         </article>
         <article class="my-3" id="getWidth">
@@ -1479,7 +1472,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getWidth('#id');</code>
+            <code>await Resource.getWidth('#id');</code>
           </div>
         </article>
         <article class="my-3" id="getHeight">
@@ -1498,7 +1491,7 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.getHeight('#id');</code>
+            <code>await Resource.getHeight('#id');</code>
           </div>
         </article>
         <article class="my-3" id="isVisible">
@@ -1519,13 +1512,16 @@
             <p>Está ação é assíncrona</p>
             <small>Veja como usar:</small>
             <br />
-            <code>await AutomationSy.isVisible('#id');</code>
+            <code>await Resource.isVisible('#id');</code>
           </div>
         </article>
       </section>
       <section>
         <div></div>
-        <footer class="pt-5 my-5 text-muted border-top w-100">
+        <footer
+          class="pt-5 my-5 text-muted border-top w-100"
+          data-lang-str="footerText"
+        >
           Created by Charles Lana - AutomationSy &middot; &copy; 2022
         </footer>
       </section>
@@ -1546,5 +1542,6 @@
     </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/docs.js"></script>
+    <script src="assets/js/i18n.js"></script>
   </body>
 </html>

@@ -19,7 +19,9 @@
   </head>
   <body>
     <div class="col-lg-10 mx-auto p-4 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <header
+        class="d-flex align-items-center pb-3 mb-5 border-bottom justify-content-between"
+      >
         <a
           href="/"
           class="d-flex align-items-center text-dark text-decoration-none"
@@ -40,12 +42,28 @@
           </svg>
           <span class="fs-4">AutomationSy</span>
         </a>
+        <div class="dropdown mx-3 d-none d-sm-block">
+          <div class="input-group input-group-lg">
+            <select
+              class="form-select"
+              aria-label="Select Language"
+              id="selectLanguage"
+            >
+              <option value="pt" selected data-lang-str="selectPt">
+                Português
+              </option>
+              <option value="en" data-lang-str="selectEn">Inglês</option>
+            </select>
+          </div>
+        </div>
       </header>
       <main>
         <div class="row">
           <div class="col-lg-6">
-            <h1>Comece com o AutomationSy</h1>
-            <p class="fs-5 col-md-8">
+            <h1 data-lang-str="indexGetStartedTitle">
+              Comece com o AutomationSy
+            </h1>
+            <p class="fs-5 col-md-8" data-lang-str="indexGetStartedText">
               Uma biblioteca de automação para testes automatizados,
               desenvolvida em typescript com alta <b>performance dos testes</b>.
               AutomationSy é <b>open source</b>.
@@ -55,13 +73,14 @@
                 href="https://www.npmjs.com/package/automationsy"
                 class="btn btn-primary btn-lg px-4"
                 target="_blank"
+                data-lang-str="indexGetStartedButton"
                 >Baixar package</a
               >
             </div>
           </div>
           <div class="col-lg-6">
             <img
-              src="assets/images/demo.gif"
+              src="assets/images/demo.png"
               class="img-fluid mb-4"
               alt="AutomationSy test demo"
             />
@@ -70,14 +89,17 @@
         <hr class="col-3 col-md-2 mb-5" />
         <div class="row g-5">
           <div class="col-md-6">
-            <h2>Projeto open source</h2>
-            <p>Veja como funciona o AutomationSy!</p>
+            <h2 data-lang-str="indexOpenSourceTitle">Projeto open source</h2>
+            <p data-lang-str="indexOpenSourceText">
+              Veja como funciona o AutomationSy!
+            </p>
             <ul class="icon-list ps-0">
               <li class="d-flex align-items-start mb-1">
                 <a
                   href="https://github.com/charleslana/automationsy/tree/master/examples"
                   rel="noopener"
                   target="_blank"
+                  data-lang-str="indexOpenSourceLinkExample"
                   >Exemplos</a
                 >
               </li>
@@ -86,29 +108,42 @@
                   href="https://github.com/charleslana/automationsy"
                   rel="noopener"
                   target="_blank"
+                  data-lang-str="indexOpenSourceLinkGithub"
                   >GitHub</a
                 >
               </li>
             </ul>
           </div>
           <div class="col-md-6">
-            <h2>Documentação</h2>
-            <p>
+            <h2 data-lang-str="indexDocumentationTitle">Documentação</h2>
+            <p data-lang-str="indexDocumentationText">
               Leia mais sobre o uso da biblioteca AutomationSy e descubra
               diversas funcionalidades para integrar aos seus testes
             </p>
             <ul class="icon-list ps-0">
               <li class="d-flex align-items-start mb-1">
-                <a href="docs.html#start" target="_blank">API</a>
+                <a href="docs-v2.html#start" target="_blank"
+                  >v2.0.0
+                  <span data-lang-str="indexDocumentationNewVersion"
+                    >(current support)</span
+                  ></a
+                >
+              </li>
+              <li class="d-flex align-items-start mb-1">
+                <a href="docs.html#start" target="_blank">v1.0.0</a>
               </li>
             </ul>
           </div>
         </div>
       </main>
-      <footer class="pt-5 my-5 text-muted border-top">
+      <footer
+        class="pt-5 my-5 text-muted border-top"
+        data-lang-str="footerText"
+      >
         Created by Charles Lana - AutomationSy &middot; &copy; 2022
       </footer>
     </div>
     <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
   </body>
 </html>
