@@ -85,9 +85,9 @@
     .getElementById("selectVersion")
     .addEventListener("change", function () {
       if (this.value == 1) {
-        window.location.href = "docs.html#start";
+        window.location.href = "docs.html";
         return;
       }
-      window.location.href = "docs-v2.html#start";
+      window.location.href = "docs-v2.html";
     });
 })();
